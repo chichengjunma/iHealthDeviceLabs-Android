@@ -1,1 +1,1 @@
-# iHealthDeviceLabs-Android
+# ihealth sdk 库文件
