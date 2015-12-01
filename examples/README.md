@@ -1,1 +1,1 @@
-# iHealthDeviceLabs-Android
+# Android sdk demo
