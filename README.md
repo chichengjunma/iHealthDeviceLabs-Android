@@ -1,18 +1,37 @@
 # iHealth Device Developer Documnentation
 ###### This document describes how to use the iHealth Device SDK to accomplish the major operation: Connection Device, Online Measurement, Offline Measurement and iHealth Device Management.
-***
-
-## API Guide
-***
 
 ## How to use the iHealth SDK
-***
 
-### 1. 用户申请流程
-***
+iHealth Device SDK 支持通过USB, Bluetooth, BluetoothLe, Wifi, 音频接口和iHealth Device相互连接并进行数据交互。
 
-### 2. SDK使用流程
-***
+### 支持设备的iHealth Device for Android
+
+iHealth Bp3m 
+iHealth Bp3l
+iHealth Bp5
+iHealth Bp7
+iHealth Abi
+iHealth Hs3
+iHealth Hs4
+iHealth Hs4s
+iHealth Hs5
+iHealth Am3
+iHealth Am3s
+iHealth Po3
+
+### 相关配置
+
+需要引入开发工具包iHealthLibrary.jar。其中BP ABI、BP3、BP5、BP7、BG1、BG5、HS3和HS5支持Android4.0及其以上版本；AM3、AM3S、HS4和PO3支持Android4.3及其以上版本和Android4.4的三星品牌手机。
+具体配置如下图：
+
+
+
+### 用户申请流程
+
+
+### SDK使用流程
+
 
 ####
 
@@ -21,12 +40,13 @@
 ####
 
 ####
+
+## API Guide
 
 ## Examples
-***
+
 
 ## Release Note
-***
+
 
 ## FAQ
-***
