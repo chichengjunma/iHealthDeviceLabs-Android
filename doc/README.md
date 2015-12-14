@@ -1,2 +1,0 @@
-# iHealth Device Manager Document
-
