@@ -190,6 +190,6 @@ Po3Control po3Control = iHealthDevicesManager.getInstance().getPo3Control(mac);
 
 ## Release Note
 
-[Click this link](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/doc/ReleaseNotes_DeviceManager.md)
+[Click this link](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/doc/ReleaseNote.md)
 
 ## FAQ
