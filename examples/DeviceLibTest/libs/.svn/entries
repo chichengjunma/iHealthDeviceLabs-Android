@@ -1,0 +1,117 @@
+10
+
+dir
+229
+svn://192.168.1.153/iHealthLibrary/branches/DeviceLibTest/libs
+svn://192.168.1.153/iHealthLibrary
+
+
+
+2015-11-23T05:21:42.249938Z
+164
+zhaoyongguang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+incomplete
+e27c13e8-5b53-4d0e-8900-04d0532097a4
+
+android-support-v4.jar
+file
+178
+
+
+
+2015-11-06T02:40:41.000000Z
+9b6c7295c6d2e1138c06572737ac0420
+2015-10-14T05:41:06.906880Z
+64
+songbaoyu
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1184670
+
+arm64-v8a
+dir
+
+armeabi
+dir
+
+armeabi-v7a
+dir
+
+btle.jar
+file
+178
+
+
+
+2015-11-11T03:14:00.000000Z
+5ac487928a134cd16b3a13b416fba189
+2015-11-17T08:09:05.504380Z
+117
+chenxuewei
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10089
+
+mips
+dir
+
+mips64
+dir
+
+x86
+dir
+
+x86_64
+dir
+

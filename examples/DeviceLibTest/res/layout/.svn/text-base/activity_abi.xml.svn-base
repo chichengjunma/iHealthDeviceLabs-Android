@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button 
+        android:id="@+id/btn_getAbiOnlyForArm"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="GetAbiOnlyForArm"/>
+    
+    <Button 
+        android:id="@+id/btn_getAbi"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="GetAbi"/>  
+         
+    <Button
+        android:id="@+id/btn_getbattery"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Getbattery" />
+
+    <Button
+        android:id="@+id/btn_startMeasure"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="StartMeasure" />
+
+    <Button
+        android:id="@+id/btn_stopMeasure"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="StopMeasure" />
+
+    <Button
+        android:id="@+id/btn_disconnect"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Disconnect" />
+
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp" />
+
+</LinearLayout>
