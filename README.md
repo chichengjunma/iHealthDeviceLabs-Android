@@ -24,7 +24,11 @@ iHealth Po3
 
 ### 相关配置
 
-需要引入开发工具包iHealthLibrary.jar。其中BP ABI、BP3、BP5、BP7、BG1、BG5、HS3和HS5支持Android4.0及其以上版本；AM3、AM3S、HS4和PO3支持Android4.3及其以上版本和Android4.4的三星品牌手机。
+#### 需要在AndroidManifest中添加权限。在安卓6.0系统上使用蓝牙需要添加ACCESS_COARSE_LOCATION权限。
+
+![box-model](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/public/user_permission.png?raw=true)
+
+#### 需要引入开发工具包iHealthLibrary.jar。其中BP ABI、BP3、BP5、BP7、BG1、BG5、HS3和HS5支持Android4.0及其以上版本；AM3、AM3S、HS4和PO3支持Android4.3及其以上版本和Android4.4的三星品牌手机。
 具体配置如下图：
 
 ![box-model](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/public/ihealth_device_doc.png?raw=true)
