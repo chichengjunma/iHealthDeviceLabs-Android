@@ -177,7 +177,7 @@ public class MainActivity extends Activity implements OnClickListener {
      * userId the identification of the user, could be the form of email address or mobile phone
      * number (mobile phone number is not supported temporarily). clientID and clientSecret, as the
      * identification of the SDK, will be issued after the iHealth SDK registration. please contact
-     * lvjincan@jiuan.com for registration.
+     * lvjincan@ihealthlabs.com.cn.com for registration.
      */
     String userName = "";
     String clientId = "";

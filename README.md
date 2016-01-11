@@ -12,14 +12,19 @@ iHealth Bp3m
 iHealth Bp3l
 iHealth Bp5
 iHealth Bp7
+iHealth Bp7s
+iHealth Bp550BT
 iHealth Abi
 iHealth Hs3
 iHealth Hs4
-iHealth Hs4s
-iHealth Hs5
 iHealth Am3
 iHealth Am3s
 iHealth Po3
+
+
+## How to use the iHealth SDK
+
+iHealth Device SDK 支持通过USB, Bluetooth, BluetoothLe, Wifi, 音频接口和iHealth Device相互连接并进行数据交互。
 
 ### Configure
 
@@ -27,18 +32,16 @@ Need to introduce the development kit iHealthLibrary.jar. Which are ABI BP3, BP5
 
 Specific configuration as shown below:
 
+> Neet to add ACCESS_COARSE_LOCATION premisson in Android 6.0。
 
-Need to introduce the development kit iHealthLibrary.jar. 
-Which are ABI BP3, BP5, BP7, BG1, BG5, BP, HS3, Android4.0 and HS5 support AM3 and its version; 
-AM3S, HS4, and PO3 support Android4.3 and the above version and Android4.4 Samsung brand mobile phone.
-detail config follow：
+![box-model](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/public/user_permission.png?raw=true)
+
 
 ![box-model](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/public/ihealth_device_doc.png?raw=true)
 
 ### How to apply for SDK permissions
 
 [Click this link](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/doc/Developer_Registration_Application_Instruction.md)
-
 
 ### How to use the iHealth SDK
 
@@ -52,8 +55,8 @@ iHealthDevicesManager.getInstance().init(MainActivity.this);
 
 ```java
 /*
- * Register callback to the manager. This method will return a callback Id.
- */
+* Register callback to the manager. This method will return a callback Id.
+*/
 int callbackId = iHealthDevicesManager.getInstance().registerClientCallback(iHealthDevicesCallback);
 ```
 
@@ -64,23 +67,13 @@ iHealthDevicesManager.getInstance().addCallbackFilterForAddress(clientCallbackId
 ```
 
 ```java
-iHealthDevicesManager.getInstance().addCallbackFilterForDeviceType(clientCallbackId, ...);
+	iHealthDevicesManager.getInstance().addCallbackFilterForDeviceType(clientCallbackId, ...);
 ```
 
 ##### 4. Verify iHealth device user permission.
 
 ```java
 iHealthDevicesManager.getInstance().sdkUserInAuthor(MainActivity.this, userName, clientId, clientSecret, callbackId);
-```
-
-```java
-private iHealthDevicesCallback iHealthDevicesCallback = new iHealthDevicesCallback() {
-    
-    @Override
-    public void onUserStatus(String username, int userStatus) {    	
-    }
-
-};
 ```
 
 ##### 5. Discovery a iHealth device.
@@ -91,12 +84,10 @@ iHealthDevicesManager.getInstance().startDiscovery(type);
 ```
 
 ```java
-private iHealthDevicesCallback iHealthDevicesCallback = new iHealthDevicesCallback() {
-
-    @Override
+private iHealthDevicesCallback iHealthDevicesCallback = new iHealthDevicesCallback() {  
+	@Override
     public void onScanDevice(String mac, String deviceType) {
     }
-
 };
 ```
 
@@ -108,10 +99,9 @@ iHealthDevicesManager.getInstance().connectDevice(userName, mac);
 
 ```java
 private iHealthDevicesCallback iHealthDevicesCallback = new iHealthDevicesCallback() {
-
-    @Override
-    public void onDeviceConnectionStateChange(String mac, String deviceType, int status) {
-    }
+	@Override
+	    public void onDeviceConnectionStateChange(String mac, String deviceType, int status) {
+ 	}
 };
 ```
 
@@ -177,13 +167,15 @@ Hs4sControl hs4sControl = iHealthDevicesManager.getInstance().getHs4sControl(mac
 * Get Hs5 device controller
 */
 Hs5Control hs5Control = iHealthDevicesManager.getInstance().getHs5Control(mac);
-
+ 
 /*
 * Get Po3 device controller
 */
 Po3Control po3Control = iHealthDevicesManager.getInstance().getPo3Control(mac);
 
 ```
+
+####
 
 ## API Guide
 
@@ -198,4 +190,5 @@ Po3Control po3Control = iHealthDevicesManager.getInstance().getPo3Control(mac);
 [Click this link](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/doc/ReleaseNote.md)
 
 ## FAQ
+
 [Click this link](https://github.com/iHealthDeviceLabs/iHealthDeviceLabs-Android/blob/master/doc/FAQ.md)
