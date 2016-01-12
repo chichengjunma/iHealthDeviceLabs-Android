@@ -152,6 +152,21 @@ Bp5Control bp5Control = iHealthDevicesManager.getInstance().getBp5Control(mac);
 Bp7Control bp7Control = iHealthDevicesManager.getInstance().getBp7Control(mac);
 
 /*
+* Get Bp7s device controller
+*/
+Bp7sControl bp7sControl = iHealthDevicesManager.getInstance().getBp7sControl(mac);
+
+/*
+* Get Bp550BT device controller
+*/
+Bp550BTControl bp550BTControl = iHealthDevicesManager.getInstance().getBp550BTControl(mac);
+
+/*
+* Get Bp926 device controller
+*/
+Bp926Control bp926Control = iHealthDevicesManager.getInstance().getBp926Control(mac);
+
+/*
 * Get Hs3 device controller
 */
 Hs3Control hs3Control = iHealthDevicesManager.getInstance().getHs3Control(mac);
