@@ -14,9 +14,12 @@ iHealth Bp5
 iHealth Bp7
 iHealth Bp7s
 iHealth Bp550BT
+iHealth KD926
 iHealth Abi
 iHealth Hs3
 iHealth Hs4
+iHealth Hs5
+iHealth Hs6
 iHealth Am3
 iHealth Am3s
 iHealth Po3
@@ -24,7 +27,7 @@ iHealth Po3
 
 ## How to use the iHealth SDK
 
-iHealth Device SDK 支持通过USB, Bluetooth, BluetoothLe, Wifi, 音频接口和iHealth Device相互连接并进行数据交互。
+iHealth Device SDK communicate with iHealth Device by USB, Bluetooth, BluetoothLe, Wifi or Audio.
 
 ### Configure
 
@@ -167,6 +170,11 @@ Hs4sControl hs4sControl = iHealthDevicesManager.getInstance().getHs4sControl(mac
 * Get Hs5 device controller
 */
 Hs5Control hs5Control = iHealthDevicesManager.getInstance().getHs5Control(mac);
+
+/*
+* Get Hs6 device controller
+*/
+HS6Control hs6Control = new HS6Control(userName, this, iHealthDevicesManager.TYPE_HS6, mIHealthDeviceHs6Callback);
  
 /*
 * Get Po3 device controller
