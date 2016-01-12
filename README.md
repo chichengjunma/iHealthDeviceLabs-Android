@@ -8,26 +8,36 @@ This document describes how to use the iHealth Device SDK to accomplish the majo
 
 ### Support iHealth Device for Android
 
-iHealth Bp3m 
-iHealth Bp3l
-iHealth Bp5
-iHealth Bp7
-iHealth Bp7s
-iHealth Bp550BT
-iHealth KD926
-iHealth Abi
-iHealth Hs3
-iHealth Hs4
-iHealth Hs5
-iHealth Hs6
-iHealth Am3
-iHealth Am3s
-iHealth Po3
+iHealth Bp3m   
+iHealth Bp3l  
+iHealth Bp5  
+iHealth Bp7  
+iHealth Bp7s  
+iHealth Bp550BT  
+iHealth KD926  
+iHealth Abi  
+iHealth Hs3  
+iHealth Hs4  
+iHealth Hs4s  
+iHealth Hs5  
+iHealth Hs6  
+iHealth Am3  
+iHealth Am3s  
+iHealth Po3  
+iHealth BG1(AG-680)  
+iHealth BG5 
+
 
 
 ## How to use the iHealth SDK
 
-iHealth Device SDK communicate with iHealth Device by USB, Bluetooth, BluetoothLe, Wifi or Audio.
+iHealth Device SDK communicate with iHealth Device by USB, Bluetooth, BluetoothLe, Wifi or Audio.  
+**USB:** iHealth Bp3m  
+**Bluetooth:** iHealth Bp5, iHealth Bp7, iHealth Bp7s, iHealth Abi, iHealth Hs3, iHealth Hs4, iHealth BG5  
+**BluetoothLe:** iHealth Bp3l, iHealth Bp550BT, iHealth KD926, iHealth Am3, iHealth Am3s, iHealth Po3, iHealth Hs4s  
+**Audio:** iHealth BG1(AG-680)  
+**Wifi:** iHealth Hs5, iHealth Hs6
+
 
 ### Configure
 
