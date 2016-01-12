@@ -25,5 +25,9 @@
     <string name="cancel">cancel</string>
     <string name="title_activity_abi">ABI</string>
     <string name="title_activity_am3">AM3</string>
+    <string name="title_activity_bp7s">Bp7s</string>
+    <string name="title_activity_bp550_bt">Bp550BT</string>
+    <string name="title_activity_am4">AM4</string>
+    <string name="title_activity_bp926">Bp926</string>
 
 </resources>

@@ -2,126 +2,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".AndroidTableLayoutActivity" >
+    android:orientation="vertical" >
 
-    <!-- 定义第一个表格，指定第2列允许收缩，第3列允许拉伸 -->
+    <Button
+        android:id="@+id/getbattery"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="getBattery" />
+    
+    <Button
+        android:id="@+id/getuserid"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="getUserId" />
+    
+    <Button
+        android:id="@+id/getalarmnum"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="getAlarnNum" />
+    
+    <Button
+        android:id="@+id/syncstage"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="syncStage" />
+    
+    <Button
+        android:id="@+id/syncactivity"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="syncActivity" />
+    
+    <Button
+        android:id="@+id/syncreal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="syncReal" />
+    
+    <Button
+        android:id="@+id/getuserinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="getUserInfo" />
+    
+    <Button
+        android:id="@+id/getalarminfo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="getAlarmInfo" />
+    
+    <Button
+        android:id="@+id/setuserid"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="setUserId" />
+    
+   <Button
+        android:id="@+id/sendrandom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="sendRandom" />  
 
-    <TableLayout
-        android:id="@+id/tablelayout01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:shrinkColumns="1"
-        android:stretchColumns="2" >
-
-        <!-- 直接添加按钮，自己占用一行 -->
-
-        <Button
-            android:id="@+id/getcontrol"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="获取控制" >
-        </Button>
-
-        <TableRow>
-
-            <Button
-                android:id="@+id/getbattery"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="获取电量" >
-            </Button>
-
-            <Button
-                android:id="@+id/getuserid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="获取id" >
-            </Button>
-
-            <Button
-                android:id="@+id/getalarmnum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="获取闹钟总数" >
-            </Button>
-        </TableRow>
-    </TableLayout>
-    <!-- 定义第2个表格，指定第2列隐藏 -->
-
-    <TableLayout
-        android:id="@+id/tablelayout02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:collapseColumns="1" >
-
-        <TableRow>
-
-            <Button
-                android:id="@+id/syncstage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="同步阶段性" >
-            </Button>
-
-            <Button
-                android:id="@+id/syncsleep"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="同步睡眠" >
-            </Button>
-        </TableRow>
-    </TableLayout>
-    <!-- 定义第3个表格，指定第2列填满空白-->
-
-    <TableLayout
-        android:id="@+id/tablelayout03"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stretchColumns="1"
-         >
-
-        <TableRow>
-
-            <Button
-                android:id="@+id/syncreal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="同步实时" >
-            </Button>
-
-            <Button
-                android:id="@+id/syncactivity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="同步运动" >
-            </Button>
-        </TableRow>
-    </TableLayout>
-    <!-- 定义第3个表格，指定第2列横跨2列-->
-
-    <TableLayout
-        android:id="@+id/tablelayout04"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         >
-
-        <TableRow>
-
-            <Button
-                android:id="@+id/getuserinfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="获取个人信息" >
-            </Button>
-            
-            <Button
-                android:id="@+id/setuserinfo"
-                android:layout_column="2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="设置用户信息" >
-            </Button>
-        </TableRow>
-    </TableLayout>
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp" />
+  
 </LinearLayout>

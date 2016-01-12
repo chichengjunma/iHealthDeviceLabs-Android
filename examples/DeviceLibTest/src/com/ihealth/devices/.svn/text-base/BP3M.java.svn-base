@@ -4,8 +4,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.example.devicelibtest.R;
-import com.ihealth.communication.contol.Bp3mControl;
-import com.ihealth.communication.contol.BpProfile;
+import com.ihealth.communication.control.Bp3mControl;
+import com.ihealth.communication.control.BpProfile;
 import com.ihealth.communication.manager.iHealthDevicesCallback;
 import com.ihealth.communication.manager.iHealthDevicesManager;
 import android.app.Activity;
@@ -33,7 +33,7 @@ public class BP3M extends Activity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_bp5);
+		setContentView(R.layout.activity_bp3_l);
 		Intent intent = getIntent();
 		deviceMac = intent.getStringExtra("mac"); 
 		findViewById(R.id.btn_getbattery).setOnClickListener(this);
@@ -43,7 +43,7 @@ public class BP3M extends Activity implements OnClickListener{
 		
 		clientCallbackId = iHealthDevicesManager.getInstance().registerClientCallback(iHealthDevicesCallback);
 		/* Limited wants to receive notification specified device */
-		iHealthDevicesManager.getInstance().addCallbackFilterForDeviceType(clientCallbackId, iHealthDevicesManager.TYPE_BP5);
+		iHealthDevicesManager.getInstance().addCallbackFilterForDeviceType(clientCallbackId, iHealthDevicesManager.TYPE_BP3M);
 		/* Get bp5 controller */
 		bp3mControl = iHealthDevicesManager.getInstance().getBp3mControl(deviceMac);
 	}
@@ -96,13 +96,6 @@ public class BP3M extends Activity implements OnClickListener{
 					e.printStackTrace();
 				}
 				
-				
-			}else if(BpProfile.ACTION_DISENABLE_OFFLINE_BP.equals(action)){
-				Log.i(TAG, "disable operation is success");
-				
-			}else if(BpProfile.ACTION_ENABLE_OFFLINE_BP.equals(action)){
-				Log.i(TAG, "enable operation is success");
-				
 			}else if(BpProfile.ACTION_ERROR_BP.equals(action)){
 				try {
 					JSONObject info = new JSONObject(message);
@@ -110,60 +103,6 @@ public class BP3M extends Activity implements OnClickListener{
 					Message msg = new Message();
 					msg.what = HANDLER_MESSAGE;
 					msg.obj = "error num: " + num;
-					myHandler.sendMessage(msg);
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				
-			}else if(BpProfile.ACTION_HISTORICAL_DATA_BP.equals(action)){
-				String str = "";
-				try {
-					JSONObject info = new JSONObject(message);
-					if (info.has(BpProfile.HISTORICAL_DATA_BP)) {
-			            JSONArray array = info.getJSONArray(BpProfile.HISTORICAL_DATA_BP);
-			            for (int i = 0; i < array.length(); i++) {
-			            	JSONObject obj = array.getJSONObject(i);
-			            	String date          = obj.getString(BpProfile.MEASUREMENT_DATE_BP);
-			            	String hightPressure = obj.getString(BpProfile.HIGH_BLOOD_PRESSURE_BP);
-			            	String lowPressure   = obj.getString(BpProfile.LOW_BLOOD_PRESSURE_BP);
-			            	String pulseWave     = obj.getString(BpProfile.PULSEWAVE_BP);
-			            	String ahr           = obj.getString(BpProfile.MEASUREMENT_AHR_BP);
-			            	String hsd           = obj.getString(BpProfile.MEASUREMENT_HSD_BP);
-			            	str = "date:" + date
-			            			+ "hightPressure:" + hightPressure + "\n"
-			            			+ "lowPressure:" + lowPressure + "\n"
-			            			+ "pulseWave" + pulseWave + "\n"
-			            			+ "ahr:" + ahr + "\n"
-			            			+ "hsd:" + hsd + "\n";
-			            }
-			        }
-					Message msg = new Message();
-					msg.what = HANDLER_MESSAGE;
-					msg.obj =  str;
-					myHandler.sendMessage(msg);
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				
-			}else if(BpProfile.ACTION_HISTORICAL_NUM_BP.equals(action)){
-				try {
-					JSONObject info = new JSONObject(message);
-					String num = info.getString(BpProfile.HISTORICAL_NUM_BP);
-					Message msg = new Message();
-					msg.what = HANDLER_MESSAGE;
-					msg.obj = "num: " + num;
-					myHandler.sendMessage(msg);
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				
-			}else if(BpProfile.ACTION_IS_ENABLE_OFFLINE.equals(action)){
-				try {
-					JSONObject info = new JSONObject(message);
-					String isEnableoffline =info.getString(BpProfile.IS_ENABLE_OFFLINE);
-					Message msg = new Message();
-					msg.what = HANDLER_MESSAGE;
-					msg.obj = "isEnableoffline: " + isEnableoffline;
 					myHandler.sendMessage(msg);
 				} catch (JSONException e) {
 					e.printStackTrace();

@@ -1,15 +1,15 @@
 10
 
 dir
-151
+290
 svn://192.168.1.153/iHealthLibrary/branches/DeviceLibTest
 svn://192.168.1.153/iHealthLibrary
 
 
 
-2015-10-14T05:41:06.906880Z
-64
-songbaoyu
+2015-12-30T06:43:14.564793Z
+288
+gaonana
 
 
 svn:special svn:externals svn:needs-lock
@@ -23,16 +23,16 @@ svn:special svn:externals svn:needs-lock
 
 
 
-incomplete
+
 e27c13e8-5b53-4d0e-8900-04d0532097a4
 
 .classpath
 file
-98
 
 
 
-2015-11-06T02:40:41.000000Z
+
+2016-01-08T01:23:46.000000Z
 6eefc83c7c3761edb9b3a5942db95ac1
 2015-10-14T05:41:06.906880Z
 64
@@ -62,11 +62,11 @@ has-props
 
 .project
 file
-98
 
 
 
-2015-11-06T02:40:41.000000Z
+
+2016-01-08T01:23:46.000000Z
 edeb8cb30787aeff6d4c78738d6d2733
 2015-10-14T05:41:06.906880Z
 64
@@ -99,15 +99,15 @@ dir
 
 AndroidManifest.xml
 file
-181
 
 
 
-2015-12-07T00:47:31.000000Z
-69e0a0d22f11d59a6c2ca02b92889878
-2015-12-07T00:43:07.119806Z
-181
-chenxuewei
+
+2016-01-08T01:23:46.000000Z
+f2f0806dfdac7cf1e2a14abf4bfed6b7
+2015-12-30T06:43:14.564793Z
+288
+gaonana
 has-props
 
 
@@ -129,7 +129,7 @@ has-props
 
 
 
-3444
+3826
 
 assets
 dir
@@ -142,11 +142,11 @@ dir
 
 ic_launcher-web.png
 file
-98
 
 
 
-2015-11-06T02:40:41.000000Z
+
+2016-01-08T01:23:46.000000Z
 03162f4ee138bcbae36f78b1d25dbd5b
 2015-10-14T05:41:06.906880Z
 64
@@ -179,11 +179,11 @@ dir
 
 lint.xml
 file
-98
 
 
 
-2015-11-06T02:40:41.000000Z
+
+2016-01-08T01:23:46.000000Z
 1ce274a186a2afb9f76542702f6ecc4d
 2015-10-14T05:41:06.906880Z
 64
@@ -213,11 +213,11 @@ has-props
 
 proguard-project.txt
 file
-98
 
 
 
-2015-11-06T02:40:41.000000Z
+
+2016-01-08T01:23:46.000000Z
 18bfe77c342b4698f1cef19cf8d918e2
 2015-10-14T05:41:06.906880Z
 64
@@ -247,11 +247,11 @@ has-props
 
 project.properties
 file
-98
 
 
 
-2015-11-06T02:40:41.000000Z
+
+2016-01-08T01:23:46.000000Z
 90a6de85edc572b68f6707a5f6ced9d4
 2015-10-14T05:41:06.906880Z
 64

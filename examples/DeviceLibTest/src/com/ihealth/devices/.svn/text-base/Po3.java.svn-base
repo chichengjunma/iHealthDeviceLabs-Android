@@ -14,8 +14,8 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import com.example.devicelibtest.R;
-import com.ihealth.communication.contol.Po3Control;
-import com.ihealth.communication.contol.PoProfile;
+import com.ihealth.communication.control.Po3Control;
+import com.ihealth.communication.control.PoProfile;
 import com.ihealth.communication.manager.iHealthDevicesCallback;
 import com.ihealth.communication.manager.iHealthDevicesManager;
 

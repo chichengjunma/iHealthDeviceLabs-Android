@@ -10,24 +10,6 @@
         android:text="Getbattery" />
 
     <Button
-        android:id="@+id/btn_isOfflineMeasure"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:text="IsOfflineMeasure" />
-
-    <Button
-        android:id="@+id/btn_enableOfflineMeasure"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:text="EnableOfflineMeasure" />
-
-    <Button
-        android:id="@+id/btn_disableOfflineMeasure"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:text="DisableOfflineMeasure" />
-
-    <Button
         android:id="@+id/btn_startMeasure"
         android:layout_width="fill_parent"
         android:layout_height="50dp"

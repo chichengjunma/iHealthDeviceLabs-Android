@@ -34,8 +34,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.devicelibtest.R;
-import com.ihealth.communication.contol.Hs5ControlForBt;
-import com.ihealth.communication.contol.HsProfile;
+import com.ihealth.communication.control.Hs5ControlForBt;
+import com.ihealth.communication.control.HsProfile;
 import com.ihealth.communication.manager.iHealthDevicesCallback;
 import com.ihealth.communication.manager.iHealthDevicesManager;
 

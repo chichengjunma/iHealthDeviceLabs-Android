@@ -7,33 +7,30 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.example.devicelibtest.R;
-import com.ihealth.communication.ins.iHealthDevicesIDPS;
 import com.ihealth.communication.manager.iHealthDevicesCallback;
 import com.ihealth.communication.manager.iHealthDevicesManager;
 import com.ihealth.devices.ABI;
 import com.ihealth.devices.AM3;
+import com.ihealth.devices.AM3S;
+import com.ihealth.devices.AM4;
 import com.ihealth.devices.BG1;
 import com.ihealth.devices.BG5;
 import com.ihealth.devices.BP3L;
 import com.ihealth.devices.BP3M;
 import com.ihealth.devices.BP5;
 import com.ihealth.devices.BP7;
+import com.ihealth.devices.Bp550BT;
+import com.ihealth.devices.Bp7s;
+import com.ihealth.devices.Bp926;
 import com.ihealth.devices.HS3;
 import com.ihealth.devices.HS4;
 import com.ihealth.devices.HS4S;
-import com.ihealth.devices.HS5BT;
 import com.ihealth.devices.HS5wifi;
-import com.ihealth.devices.HS6;
 import com.ihealth.devices.Po3;
 import com.ihealth.utils.MyLog;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothDevice;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -166,12 +163,11 @@ public class MainActivity extends Activity implements OnClickListener {
         public void onDeviceNotify(String mac, String deviceType, String action, String message) {
         }
 
-        @Override
-        public void onScanFinish() {
-            tv_discovery.setText("discover finish");
-            Log.i(TAG, "" + Thread.currentThread().getId());
-        }
-
+		@Override
+		public void onScanFinish() {
+			tv_discovery.setText("discover finish");
+		}
+		
     };
 
     /*
@@ -188,7 +184,7 @@ public class MainActivity extends Activity implements OnClickListener {
     public void onClick(View arg0) {
         switch (arg0.getId()) {
             case R.id.btn_discorvery:
-                int type = iHealthDevicesManager.DISCOVERY_BP3L;
+                int type = iHealthDevicesManager.DISCOVERY_KD926;
                 /*
                  * discovery iHealth devices, This method can specify only to search for the devices
                  * that you want to connect
@@ -222,9 +218,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
 
             case R.id.btn_GotoHS6:
-                Intent intentHS6 = new Intent();
-                intentHS6.setClass(MainActivity.this, HS6.class);
-                startActivity(intentHS6);
+//                Intent intentHS6 = new Intent();
+//                intentHS6.setClass(MainActivity.this, HS6.class);
+//                startActivity(intentHS6);
                 break;
             default:
                 break;
@@ -329,9 +325,10 @@ public class MainActivity extends Activity implements OnClickListener {
                 HashMap<String, String> hm = list_ScanDevices.get(position);
                 String type = hm.get("type");
                 String mac = hm.get("mac");
+                Log.i(TAG, "mac = "+mac);
                 boolean req = iHealthDevicesManager.getInstance().connectDevice(userName, mac);
                 if (!req) {
-                    Log.i(TAG, "Haven’t permission to connect this device");
+                	Toast.makeText(MainActivity.this, "Haven’t permission to connect this device or the mac is not valid", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -362,11 +359,11 @@ public class MainActivity extends Activity implements OnClickListener {
                     startActivity(intent);
 
                 } else if (iHealthDevicesManager.TYPE_AM3S.equals(type)) {
-                    intent.setClass(MainActivity.this, BP5.class);
+                    intent.setClass(MainActivity.this, AM3S.class);
                     startActivity(intent);
 
                 } else if (iHealthDevicesManager.TYPE_AM4.equals(type)) {
-                    intent.setClass(MainActivity.this, BP5.class);
+                    intent.setClass(MainActivity.this, AM4.class);
                     startActivity(intent);
 
                 } else if (iHealthDevicesManager.TYPE_BG5.equals(type)) {
@@ -385,15 +382,21 @@ public class MainActivity extends Activity implements OnClickListener {
                     intent.setClass(MainActivity.this, BP5.class);
                     startActivity(intent);
 
+                } else if (iHealthDevicesManager.TYPE_BP7S.equals(type)) {
+                    intent.setClass(MainActivity.this, Bp7s.class);
+                    startActivity(intent);
+
                 } else if (iHealthDevicesManager.TYPE_BP7.equals(type)) {
                     intent.setClass(MainActivity.this, BP7.class);
                     startActivity(intent);
 
-                } else if (iHealthDevicesManager.TYPE_BP7S.equals(type)) {
-                    intent.setClass(MainActivity.this, BP5.class);
+                } else if (iHealthDevicesManager.TYPE_550BT.equals(type)) {
+                	intent.setClass(MainActivity.this, Bp550BT.class);
                     startActivity(intent);
-
-                } else if (iHealthDevicesManager.TYPE_HS3.equals(type)) {
+				} else if (iHealthDevicesManager.TYPE_KD926.equals(type)) {
+					intent.setClass(MainActivity.this, Bp926.class);
+					startActivity(intent);
+				} else if (iHealthDevicesManager.TYPE_HS3.equals(type)) {
                     intent.setClass(MainActivity.this, HS3.class);
                     startActivity(intent);
 
@@ -410,8 +413,8 @@ public class MainActivity extends Activity implements OnClickListener {
                     startActivity(intent);
 
                 } else if (iHealthDevicesManager.TYPE_HS5_BT.equals(type)) {
-                    intent.setClass(MainActivity.this, HS5BT.class);
-                    startActivity(intent);
+//                    intent.setClass(MainActivity.this, HS5BT.class);
+//                    startActivity(intent);
 
                 } else if (iHealthDevicesManager.TYPE_HS6.equals(type)) {
                     intent.setClass(MainActivity.this, BP5.class);
@@ -421,7 +424,9 @@ public class MainActivity extends Activity implements OnClickListener {
                     intent.setClass(MainActivity.this, Po3.class);
                     startActivity(intent);
 
-                }
+                }else if (iHealthDevicesManager.TYPE_BP7S.equals(type)) {
+					Log.i(TAG, "搜索到BP7S");
+				}
             }
         });
         sa_connected.notifyDataSetChanged();

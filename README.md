@@ -4,7 +4,7 @@ This document describes how to use the iHealth Device SDK to accomplish the majo
 
 ### Latest version
 
-2.0.1
+2.1.0
 
 ### Support iHealth Device for Android
 
@@ -160,6 +160,11 @@ Bp7sControl bp7sControl = iHealthDevicesManager.getInstance().getBp7sControl(mac
 * Get Bp550BT device controller
 */
 Bp550BTControl bp550BTControl = iHealthDevicesManager.getInstance().getBp550BTControl(mac);
+
+/*
+* Get Bp926 device controller
+*/
+Bp926Control bp926Control = iHealthDevicesManager.getInstance().getBp926Control(mac);
 
 /*
 * Get Bp926 device controller

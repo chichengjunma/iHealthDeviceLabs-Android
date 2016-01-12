@@ -7,8 +7,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.example.devicelibtest.R;
-import com.ihealth.communication.contol.Bg5Control;
-import com.ihealth.communication.contol.Bg5Profile;
+import com.ihealth.communication.control.Bg5Control;
+import com.ihealth.communication.control.Bg5Profile;
 import com.ihealth.communication.manager.iHealthDevicesCallback;
 import com.ihealth.communication.manager.iHealthDevicesManager;
 

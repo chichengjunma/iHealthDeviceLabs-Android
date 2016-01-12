@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_getbattery"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Getbattery" />
+
+    <Button
+        android:id="@+id/btn_getOfflineNum"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="getOfflineNum" />
+
+    <Button
+        android:id="@+id/btn_getOffineData"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="getOffineData" />
+
+    <Button
+        android:id="@+id/btn_disconnect"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Disconnect" />
+
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp" />
+
+</LinearLayout>

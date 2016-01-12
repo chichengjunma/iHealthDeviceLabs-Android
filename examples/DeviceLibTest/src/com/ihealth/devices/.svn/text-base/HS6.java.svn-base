@@ -14,7 +14,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import com.example.devicelibtest.R;
-import com.ihealth.communication.contol.HS6Control;
+import com.ihealth.communication.control.HS6Control;
 import com.ihealth.communication.manager.iHealthDeviceHs6Callback;
 import com.ihealth.communication.manager.iHealthDevicesManager;
 
@@ -93,7 +93,14 @@ public class HS6 extends Activity implements OnClickListener {
                             String firmwareVersion = jsonObject2.getString(HS6Control.HS6_FIRMWARE_VERSION);
                             int position = jsonObject2.getInt(HS6Control.HS6_POSITION);
                             int settedWifi = jsonObject2.getInt(HS6Control.HS6_SETTED_WIFI);
-                            noticeString = "result:" + result + "--model:" + model + "--firmwareVersion"
+                            if (result == 1) {
+                                noticeString = "bind success";
+                            } else if (result == 2) {
+                                noticeString = "the scale has no empty position";
+                            } else {
+                                noticeString = "bind fail";
+                            }
+                            noticeString =noticeString+"\n "+"result:" + result + "--model:" + model + "--firmwareVersion"
                                     + firmwareVersion + "--position:" + position + "--setted:" + settedWifi;
                             Log.d(TAG, noticeString);
                             mHandler.sendEmptyMessage(1);
@@ -186,7 +193,7 @@ public class HS6 extends Activity implements OnClickListener {
                     @Override
                     public void run() {
                         // TODO Auto-generated method stub
-                        boolean permission = mHS6control.bindDeviceHS6(code);
+                        boolean permission = mHS6control.bindDeviceHS6("1999-11-12 11:29:10", 160, 2, 1, code);
                         if (!permission) {
                             noticeString = "You haven't gotten the permission, please go to certificate firstly";
                             mHandler.sendEmptyMessage(1);

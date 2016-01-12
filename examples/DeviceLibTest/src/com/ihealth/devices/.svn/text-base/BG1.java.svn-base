@@ -14,8 +14,8 @@ import android.widget.TextView;
 
 import com.example.devicelibtest.R;
 import com.ihealth.androidbg.audio.AudioTrackManager;
-import com.ihealth.communication.contol.Bg1Control;
-import com.ihealth.communication.contol.Bg1Profile;
+import com.ihealth.communication.control.Bg1Control;
+import com.ihealth.communication.control.Bg1Profile;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
