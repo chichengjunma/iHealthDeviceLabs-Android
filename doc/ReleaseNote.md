@@ -13,6 +13,6 @@ More info:
 
 ### 2. V2.1.0
 ```
-Description: Support BP7S KD550 KH926
+Description: Support BP7S KD550 KD926
 Release Date: 2016-1-11
 ```
