@@ -26,6 +26,7 @@ import com.ihealth.devices.HS3;
 import com.ihealth.devices.HS4;
 import com.ihealth.devices.HS4S;
 import com.ihealth.devices.HS5wifi;
+import com.ihealth.devices.HS6;
 import com.ihealth.devices.Po3;
 import com.ihealth.utils.MyLog;
 
@@ -218,9 +219,9 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
 
             case R.id.btn_GotoHS6:
-//                Intent intentHS6 = new Intent();
-//                intentHS6.setClass(MainActivity.this, HS6.class);
-//                startActivity(intentHS6);
+                Intent intentHS6 = new Intent();
+                intentHS6.setClass(MainActivity.this, HS6.class);
+                startActivity(intentHS6);
                 break;
             default:
                 break;
