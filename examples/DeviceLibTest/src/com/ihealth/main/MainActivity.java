@@ -177,15 +177,15 @@ public class MainActivity extends Activity implements OnClickListener {
      * identification of the SDK, will be issued after the iHealth SDK registration. please contact
      * lvjincan@jiuan.com for registration.
      */
-    String userName = "";
-    String clientId = "";
-    String clientSecret = "";
+    String userName = "liu01234345555@jiuan.com";
+    String clientId = "2a8387e3f4e94407a3a767a72dfd52ea";
+    String clientSecret = "fd5e845c47944a818bc511fb7edb0a77";
 
     @Override
     public void onClick(View arg0) {
         switch (arg0.getId()) {
             case R.id.btn_discorvery:
-                int type = iHealthDevicesManager.DISCOVERY_KD926;
+                int type = iHealthDevicesManager.DISCOVERY_AM3S;
                 /*
                  * discovery iHealth devices, This method can specify only to search for the devices
                  * that you want to connect

@@ -144,7 +144,8 @@ public final class R {
         public static final int title_activity_abi=0x7f050016;
         public static final int title_activity_am3=0x7f050017;
         public static final int title_activity_am3_s=0x7f050002;
-        public static final int title_activity_am4=0x7f05001a;
+        public static final int title_activity_am3s=0x7f05001a;
+        public static final int title_activity_am4=0x7f05001b;
         public static final int title_activity_bg1=0x7f05000d;
         public static final int title_activity_bg5=0x7f05000e;
         public static final int title_activity_bp3_l=0x7f050006;
@@ -153,7 +154,7 @@ public final class R {
         public static final int title_activity_bp550_bt=0x7f050019;
         public static final int title_activity_bp7=0x7f050004;
         public static final int title_activity_bp7s=0x7f050018;
-        public static final int title_activity_bp926=0x7f05001b;
+        public static final int title_activity_bp926=0x7f05001c;
         public static final int title_activity_hs3=0x7f050009;
         public static final int title_activity_hs4=0x7f05000a;
         public static final int title_activity_hs4s=0x7f05000b;
