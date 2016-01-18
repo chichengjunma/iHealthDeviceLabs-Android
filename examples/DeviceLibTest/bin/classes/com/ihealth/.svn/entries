@@ -1,0 +1,37 @@
+10
+
+dir
+295
+svn://192.168.1.153/iHealthLibrary/branches/DeviceLibTest/src/com/ihealth
+svn://192.168.1.153/iHealthLibrary
+
+
+
+2016-01-12T01:27:22.391621Z
+295
+songbaoyu
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e27c13e8-5b53-4d0e-8900-04d0532097a4
+
+devices
+dir
+
+main
+dir
+
+utils
+dir
+

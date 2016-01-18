@@ -91,9 +91,25 @@
             android:name="com.ihealth.devices.HS6"
             android:label="@string/title_activity_abi" >
         </activity>
+        <activity
+            android:name="com.ihealth.devices.AM3"
+            android:label="@string/title_activity_am3" >
+        </activity>
+        <activity
+            android:name="com.ihealth.devices.AM3S"
+            android:label="@string/title_activity_am3s" >
+        </activity>
          <activity
             android:name="com.ihealth.devices.AM4"
             android:label="@string/title_activity_am4" >
+        </activity>
+        <activity
+            android:name="com.ihealth.devices.Bp7s"
+            android:label="@string/title_activity_bp7s" >
+        </activity>
+        <activity
+            android:name="com.ihealth.devices.Bp550BT"
+            android:label="@string/title_activity_bp550_bt" >
         </activity>
     </application>
 
