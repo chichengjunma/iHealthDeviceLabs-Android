@@ -56,6 +56,7 @@ public class AM3 extends Activity implements OnClickListener{
 		findViewById(R.id.getalarminfo).setOnClickListener(this);
 		findViewById(R.id.setuserid).setOnClickListener(this);
 		findViewById(R.id.reset).setOnClickListener(this);
+		findViewById(R.id.disconnect).setOnClickListener(this);
 		tv_return = (TextView)findViewById(R.id.tv_return);
 	}
 	
@@ -289,6 +290,12 @@ public class AM3 extends Activity implements OnClickListener{
 		case R.id.reset:
 			if (am3Control != null) {
 				am3Control.reset(1);
+			}else
+				Toast.makeText(this, "am3Control == null", Toast.LENGTH_LONG).show();
+			break;
+		case R.id.disconnect:
+			if (am3Control != null) {
+				am3Control.disconnect();
 			}else
 				Toast.makeText(this, "am3Control == null", Toast.LENGTH_LONG).show();
 			break;

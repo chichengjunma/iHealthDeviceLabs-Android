@@ -7,68 +7,74 @@
     <Button
         android:id="@+id/getbattery"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="getBattery" />
     
     <Button
         android:id="@+id/getuserid"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="getUserId" />
     
     <Button
         android:id="@+id/getalarmnum"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="getAlarnNum" />
     
     <Button
         android:id="@+id/setalarm"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="setAlarm" />
     
     <Button
         android:id="@+id/syncactivity"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="syncActivity" />
     
     <Button
         android:id="@+id/syncreal"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="syncReal" />
     
     <Button
         android:id="@+id/getuserinfo"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="getUserInfo" />
     
     <Button
         android:id="@+id/setuserinfo"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="setUserInfo" />
     
     <Button
         android:id="@+id/getalarminfo"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="getAlarmInfo" />
     
     <Button
         android:id="@+id/setuserid"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="setUserId" />
     
    <Button
         android:id="@+id/reset"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:text="reset" />  
+        
+   <Button
+        android:id="@+id/disconnect"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="disconnect" />  
 
     <TextView
         android:id="@+id/tv_return"

@@ -55,6 +55,7 @@ public class AM3S extends Activity implements OnClickListener{
 		findViewById(R.id.getuserinfo).setOnClickListener(this);
 		findViewById(R.id.setuserid).setOnClickListener(this);
 		findViewById(R.id.sendrandom).setOnClickListener(this);
+		findViewById(R.id.disconnect).setOnClickListener(this);
 		tv_return = (TextView)findViewById(R.id.tv_return);
 	}
 	
@@ -258,6 +259,12 @@ public class AM3S extends Activity implements OnClickListener{
 		case R.id.sendrandom:
 			if (am3sControl != null) {
 				am3sControl.sendRandom();
+			}else
+				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
+			break;
+		case R.id.disconnect:
+			if (am3sControl != null) {
+				am3sControl.disconnect();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;

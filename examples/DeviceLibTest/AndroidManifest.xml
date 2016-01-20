@@ -111,6 +111,10 @@
             android:name="com.ihealth.devices.Bp550BT"
             android:label="@string/title_activity_bp550_bt" >
         </activity>
+        <activity
+            android:name="com.ihealth.devices.Bp926"
+            android:label="@string/title_activity_bp926" >
+        </activity>
     </application>
 
 </manifest>

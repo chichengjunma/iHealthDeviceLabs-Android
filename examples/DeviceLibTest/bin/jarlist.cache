@@ -1,3 +1,9 @@
 # cache for current jar dependency. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
+1453256257000 23571 3ba27649469c1d71e1a54c0fd66a0d94856df555 /Users/zhaoji/Documents/SVN-Space_New/iHealthLib/branches/IhealthDeviceLib/libs/pl2303driver.jar
+1450926883000 23571 3ba27649469c1d71e1a54c0fd66a0d94856df555 /Users/zhaoji/Documents/GitHub/iHealthDeviceLabs-Android/examples/DeviceLibTest/libs/pl2303driver.jar
+1453256257000 16289 f5a964968f16d2dfe3a6005de3451b52b4a3089c /Users/zhaoji/Documents/SVN-Space_New/iHealthLib/branches/IhealthDeviceLib/libs/smartlinklib3.6.4_product.jar
+1452648839000 16289 f5a964968f16d2dfe3a6005de3451b52b4a3089c /Users/zhaoji/Documents/GitHub/iHealthDeviceLabs-Android/examples/DeviceLibTest/libs/smartlinklib3.6.4_product.jar
+1453256257000 18862 47a3c8b4c33fc47ea7dab83494262a0a121feb2e /Users/zhaoji/Documents/SVN-Space_New/iHealthLib/branches/IhealthDeviceLib/libs/btle.jar
+1452648839000 10089 0d243f9a5b360101fbfa5a47ce5e3924e38ebd52 /Users/zhaoji/Documents/GitHub/iHealthDeviceLabs-Android/examples/DeviceLibTest/libs/btle.jar

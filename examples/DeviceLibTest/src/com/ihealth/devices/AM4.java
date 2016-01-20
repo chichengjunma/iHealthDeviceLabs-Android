@@ -49,6 +49,7 @@ public class AM4 extends Activity implements OnClickListener{
 		findViewById(R.id.btn_SetSwimPara).setOnClickListener(this);
 		findViewById(R.id.btn_GetBattery).setOnClickListener(this);
 		findViewById(R.id.btn_SyncStage).setOnClickListener(this);
+		findViewById(R.id.btn_Disconnect).setOnClickListener(this);
 		tv_return = (TextView)findViewById(R.id.tv_return);
 	}
 	
@@ -275,6 +276,13 @@ public class AM4 extends Activity implements OnClickListener{
 		case R.id.btn_SyncStage:
 			if (am4Control != null) 
 				am4Control.syncStageReprotData();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
+		case R.id.btn_Disconnect:
+			if (am4Control != null) 
+				am4Control.disconnect();
 			else
 				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
 			break;

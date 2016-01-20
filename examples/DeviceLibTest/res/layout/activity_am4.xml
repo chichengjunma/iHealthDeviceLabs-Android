@@ -39,6 +39,12 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:text="SyncStage" />
+   
+   <Button
+        android:id="@+id/btn_Disconnect"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="disconnect" />
         
 
     <TextView
