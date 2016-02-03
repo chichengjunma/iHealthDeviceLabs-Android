@@ -414,8 +414,8 @@ public class MainActivity extends Activity implements OnClickListener {
                     startActivity(intent);
 
                 } else if (iHealthDevicesManager.TYPE_HS5_BT.equals(type)) {
-//                    intent.setClass(MainActivity.this, HS5BT.class);
-//                    startActivity(intent);
+                    intent.setClass(MainActivity.this, HS5BT.class);
+                    startActivity(intent);
 
                 } else if (iHealthDevicesManager.TYPE_HS6.equals(type)) {
                     intent.setClass(MainActivity.this, BP5.class);
