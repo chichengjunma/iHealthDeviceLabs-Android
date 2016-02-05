@@ -42,6 +42,7 @@ public class BP7 extends Activity implements OnClickListener{
 		findViewById(R.id.btn_enableOfflineMeasure).setOnClickListener(this);
 		findViewById(R.id.btn_disableOfflineMeasure).setOnClickListener(this);
 		findViewById(R.id.btn_startMeasure).setOnClickListener(this);
+		findViewById(R.id.btn_stopMeasure).setOnClickListener(this);
 		findViewById(R.id.btn_getangle).setOnClickListener(this);
 		findViewById(R.id.btn_disconnect).setOnClickListener(this);
 		tv_return = (TextView)findViewById(R.id.tv_return);

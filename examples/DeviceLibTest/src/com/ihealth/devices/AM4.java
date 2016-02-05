@@ -45,10 +45,18 @@ public class AM4 extends Activity implements OnClickListener{
 
 		findViewById(R.id.btn_SetUserMessage).setOnClickListener(this);
 		findViewById(R.id.btn_SetUserID).setOnClickListener(this);
+		findViewById(R.id.btn_GetUserId).setOnClickListener(this);
+		findViewById(R.id.btn_GetAlarmNum).setOnClickListener(this);
 		findViewById(R.id.btn_checkSwimPara).setOnClickListener(this);
 		findViewById(R.id.btn_SetSwimPara).setOnClickListener(this);
 		findViewById(R.id.btn_GetBattery).setOnClickListener(this);
+		findViewById(R.id.btn_GetUserInfo).setOnClickListener(this);
+		findViewById(R.id.btn_GetAlarmInfo).setOnClickListener(this);
 		findViewById(R.id.btn_SyncStage).setOnClickListener(this);
+		findViewById(R.id.btn_SyncSleep).setOnClickListener(this);
+		findViewById(R.id.btn_SyncActivity).setOnClickListener(this);
+		findViewById(R.id.btn_SyncReal).setOnClickListener(this);
+		findViewById(R.id.btn_SendRandom).setOnClickListener(this);
 		findViewById(R.id.btn_Disconnect).setOnClickListener(this);
 		tv_return = (TextView)findViewById(R.id.tv_return);
 	}
@@ -126,6 +134,18 @@ public class AM4 extends Activity implements OnClickListener{
 					e.printStackTrace();
 				}
 				break;
+			case AmProfile.ACTION_SYNC_SLEEP_DATA_AM:
+				try {
+					JSONObject info = new JSONObject(message);
+					String stage_info =info.getString(AmProfile.SYNC_SLEEP_DATA_AM);
+					Message msg = new Message();
+					msg.what = HANDLER_MESSAGE;
+					msg.obj = "Sleep Data: " + stage_info;
+					myHandler.sendMessage(msg);
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+				break;
 			case AmProfile.ACTION_SYNC_ACTIVITY_DATA_AM:
 				try {
 					JSONObject info = new JSONObject(message);
@@ -174,13 +194,13 @@ public class AM4 extends Activity implements OnClickListener{
 					e.printStackTrace();
 				}
 				break;
-			case AmProfile.ACTION_SET_USERID_AM:
+			case AmProfile.ACTION_SET_USERID_SUCCESS_AM:
 				Message msg = new Message();
 				msg.what = HANDLER_MESSAGE;
 				msg.obj = "Set ID success";
 				myHandler.sendMessage(msg);
 				break;
-			case AmProfile.ACTION_SET_ALARMINFO_AM:
+			case AmProfile.ACTION_SET_ALARMINFO_SUCCESS_AM:
 				Message msg1 = new Message();
 				msg1.what = HANDLER_MESSAGE;
 				msg1.obj = "Set Alarm success";
@@ -198,7 +218,7 @@ public class AM4 extends Activity implements OnClickListener{
 					e.printStackTrace();
 				}
 				break;
-			case AmProfile.ACTION_SET_USERINFO_AM:
+			case AmProfile.ACTION_SET_USERINFO_SUCCESS_AM:
 				Message msg3 = new Message();
 				msg3.what = HANDLER_MESSAGE;
 				msg3.obj = "Set User Info success";
@@ -252,6 +272,20 @@ public class AM4 extends Activity implements OnClickListener{
 				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
 			break;
 			
+		case R.id.btn_GetUserId:
+			if (am4Control != null) 
+				am4Control.getUserId();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
+		case R.id.btn_GetAlarmNum:
+			if (am4Control != null) 
+				am4Control.getAlarmClockNum();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
 		case R.id.btn_checkSwimPara:
 			if (am4Control != null) 
 				am4Control.checkSwimPara();
@@ -273,9 +307,51 @@ public class AM4 extends Activity implements OnClickListener{
 				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
 			break;
 			
+		case R.id.btn_GetUserInfo:
+			if (am4Control != null) 
+				am4Control.getUserInfo();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
+		case R.id.btn_GetAlarmInfo:
+			if (am4Control != null) 
+				am4Control.checkAlarmClock(1);
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
 		case R.id.btn_SyncStage:
 			if (am4Control != null) 
 				am4Control.syncStageReprotData();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
+		case R.id.btn_SyncSleep:
+			if (am4Control != null) 
+				am4Control.syncSleepData();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
+		case R.id.btn_SyncActivity:
+			if (am4Control != null) 
+				am4Control.syncActivityData();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
+		case R.id.btn_SyncReal:
+			if (am4Control != null) 
+				am4Control.syncRealData();
+			else
+				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
+			break;
+			
+		case R.id.btn_SendRandom:
+			if (am4Control != null) 
+				am4Control.sendRandom();
 			else
 				Toast.makeText(AM4.this, "am4Control == null", Toast.LENGTH_LONG).show();
 			break;

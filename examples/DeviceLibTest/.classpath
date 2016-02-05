@@ -6,6 +6,5 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry exported="true" kind="lib" path="libs/btle.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/iHealthLibrary_2.1.0.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

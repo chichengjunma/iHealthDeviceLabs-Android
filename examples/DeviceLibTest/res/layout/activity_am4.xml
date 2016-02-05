@@ -7,43 +7,106 @@
    <Button
         android:id="@+id/btn_SetUserMessage"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
+        android:padding="0dp"
         android:text="SetUserMessage" />  
         
    <Button
         android:id="@+id/btn_SetUserID"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
+        android:padding="0dp"
         android:text="SetUserID" />
+   
+   <Button
+        android:id="@+id/btn_GetUserId"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="getUserId" />
+   
+   <Button
+        android:id="@+id/btn_GetAlarmNum"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="getAlarnNum" />
       
    <Button
         android:id="@+id/btn_checkSwimPara"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
+        android:padding="0dp"
         android:text="checkSwimPara" />
          
    <Button
         android:id="@+id/btn_SetSwimPara"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
+        android:padding="0dp"
         android:text="SetSwimPara" />
             
    <Button
         android:id="@+id/btn_GetBattery"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
+        android:padding="0dp"
         android:text="GetBattery" />
+   
+   <Button
+        android:id="@+id/btn_GetUserInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="getUserInfo" />
+   
+   <Button
+        android:id="@+id/btn_GetAlarmInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="getAlarmInfo" />
                
    <Button
         android:id="@+id/btn_SyncStage"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
+        android:padding="0dp"
         android:text="SyncStage" />
+   
+   <Button
+        android:id="@+id/btn_SyncSleep"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="syncSleep" />
+    
+    <Button
+        android:id="@+id/btn_SyncActivity"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="syncActivity" />
+    
+    <Button
+        android:id="@+id/btn_SyncReal"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="syncReal" />
+    
+    <Button
+        android:id="@+id/btn_SendRandom"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:padding="0dp"
+        android:text="sendRandom" /> 
    
    <Button
         android:id="@+id/btn_Disconnect"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
+        android:padding="0dp"
         android:text="disconnect" />
         
 

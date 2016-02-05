@@ -25,6 +25,7 @@ import com.ihealth.devices.Bp926;
 import com.ihealth.devices.HS3;
 import com.ihealth.devices.HS4;
 import com.ihealth.devices.HS4S;
+import com.ihealth.devices.HS5BT;
 import com.ihealth.devices.HS5wifi;
 import com.ihealth.devices.HS6;
 import com.ihealth.devices.Po3;
@@ -185,7 +186,7 @@ public class MainActivity extends Activity implements OnClickListener {
     public void onClick(View arg0) {
         switch (arg0.getId()) {
             case R.id.btn_discorvery:
-                int type = iHealthDevicesManager.DISCOVERY_AM3S;
+                int type = iHealthDevicesManager.DISCOVERY_AM4;
                 /*
                  * discovery iHealth devices, This method can specify only to search for the devices
                  * that you want to connect
@@ -426,7 +427,8 @@ public class MainActivity extends Activity implements OnClickListener {
                     startActivity(intent);
 
                 }else if (iHealthDevicesManager.TYPE_BP7S.equals(type)) {
-					Log.i(TAG, "搜索到BP7S");
+                	intent.setClass(MainActivity.this, Bp7s.class);
+                    startActivity(intent);
 				}
             }
         });

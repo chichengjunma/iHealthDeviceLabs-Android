@@ -5,67 +5,73 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/getbattery"
+        android:id="@+id/btn_GetBattery"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="getBattery" />
     
     <Button
-        android:id="@+id/getuserid"
+        android:id="@+id/btn_GetUserId"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="getUserId" />
     
     <Button
-        android:id="@+id/getalarmnum"
+        android:id="@+id/btn_GetAlarmNum"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="getAlarnNum" />
     
     <Button
-        android:id="@+id/syncstage"
+        android:id="@+id/btn_SyncStage"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="syncStage" />
     
     <Button
-        android:id="@+id/syncactivity"
+        android:id="@+id/btn_SyncSleep"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="syncSleep" />
+    
+    <Button
+        android:id="@+id/btn_SyncActivity"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="syncActivity" />
     
     <Button
-        android:id="@+id/syncreal"
+        android:id="@+id/btn_SyncReal"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="syncReal" />
     
     <Button
-        android:id="@+id/getuserinfo"
+        android:id="@+id/btn_GetUserInfo"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="getUserInfo" />
     
     <Button
-        android:id="@+id/getalarminfo"
+        android:id="@+id/btn_GetAlarmInfo"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="getAlarmInfo" />
     
     <Button
-        android:id="@+id/setuserid"
+        android:id="@+id/btn_SetUserId"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="setUserId" />
     
    <Button
-        android:id="@+id/sendrandom"
+        android:id="@+id/btn_SendRandom"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="sendRandom" />  
         
    <Button
-        android:id="@+id/disconnect"
+        android:id="@+id/btn_Disconnect"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:text="disconnect" /> 

@@ -46,16 +46,18 @@ public class AM3S extends Activity implements OnClickListener{
 		
 		am3sControl = iHealthDevicesManager.getInstance().getAm3sControl(this.mac);
 		//button
-		findViewById(R.id.getbattery).setOnClickListener(this);
-		findViewById(R.id.getuserid).setOnClickListener(this);
-		findViewById(R.id.getalarmnum).setOnClickListener(this);
-		findViewById(R.id.syncstage).setOnClickListener(this);
-		findViewById(R.id.syncactivity).setOnClickListener(this);
-		findViewById(R.id.syncreal).setOnClickListener(this);
-		findViewById(R.id.getuserinfo).setOnClickListener(this);
-		findViewById(R.id.setuserid).setOnClickListener(this);
-		findViewById(R.id.sendrandom).setOnClickListener(this);
-		findViewById(R.id.disconnect).setOnClickListener(this);
+		findViewById(R.id.btn_GetBattery).setOnClickListener(this);
+		findViewById(R.id.btn_GetUserId).setOnClickListener(this);
+		findViewById(R.id.btn_GetAlarmNum).setOnClickListener(this);
+		findViewById(R.id.btn_SyncStage).setOnClickListener(this);
+		findViewById(R.id.btn_SyncSleep).setOnClickListener(this);
+		findViewById(R.id.btn_SyncActivity).setOnClickListener(this);
+		findViewById(R.id.btn_SyncReal).setOnClickListener(this);
+		findViewById(R.id.btn_GetUserInfo).setOnClickListener(this);
+		findViewById(R.id.btn_GetAlarmInfo).setOnClickListener(this);
+		findViewById(R.id.btn_SetUserId).setOnClickListener(this);
+		findViewById(R.id.btn_SendRandom).setOnClickListener(this);
+		findViewById(R.id.btn_Disconnect).setOnClickListener(this);
 		tv_return = (TextView)findViewById(R.id.tv_return);
 	}
 	
@@ -132,6 +134,18 @@ public class AM3S extends Activity implements OnClickListener{
 					e.printStackTrace();
 				}
 				break;
+			case AmProfile.ACTION_SYNC_SLEEP_DATA_AM:
+				try {
+					JSONObject info = new JSONObject(message);
+					String stage_info =info.getString(AmProfile.SYNC_SLEEP_DATA_AM);
+					Message msg = new Message();
+					msg.what = HANDLER_MESSAGE;
+					msg.obj = "Sleep Data: " + stage_info;
+					myHandler.sendMessage(msg);
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+				break;
 			case AmProfile.ACTION_SYNC_ACTIVITY_DATA_AM:
 				try {
 					JSONObject info = new JSONObject(message);
@@ -180,7 +194,7 @@ public class AM3S extends Activity implements OnClickListener{
 					e.printStackTrace();
 				}
 				break;
-			case AmProfile.ACTION_SET_USERID_AM:
+			case AmProfile.ACTION_SET_USERID_SUCCESS_AM:
 				Message msg = new Message();
 				msg.what = HANDLER_MESSAGE;
 				msg.obj = "Set ID success";
@@ -208,61 +222,73 @@ public class AM3S extends Activity implements OnClickListener{
 	public void onClick(View arg0) {
 		int id = arg0.getId();
 		switch (id) {
-		case R.id.getbattery:
+		case R.id.btn_GetBattery:
 			if (am3sControl != null) {
 				am3sControl.queryAMState();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.getuserid:
+		case R.id.btn_GetUserId:
 			if (am3sControl != null) {
 				am3sControl.getUserId();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.getalarmnum:
+		case R.id.btn_GetAlarmNum:
 			if (am3sControl != null) {
 				am3sControl.getAlarmClockNum();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.syncstage:
+		case R.id.btn_SyncStage:
 			if (am3sControl != null) {
 				am3sControl.syncStageReprotData();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.syncactivity:
+		case R.id.btn_SyncSleep:
+			if (am3sControl != null) {
+				am3sControl.syncSleepData();
+			}else
+				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
+			break;
+		case R.id.btn_SyncActivity:
 			if (am3sControl != null) {
 				am3sControl.syncActivityData();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.syncreal:
+		case R.id.btn_SyncReal:
 			if (am3sControl != null) {
 				am3sControl.syncRealData();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.getuserinfo:
+		case R.id.btn_GetUserInfo:
 			if (am3sControl != null) {
 				am3sControl.getUserInfo();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.setuserid:
+		case R.id.btn_GetAlarmInfo:
+			if (am3sControl != null) {
+				am3sControl.checkAlarmClock(1);
+			}else
+				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
+			break;
+		case R.id.btn_SetUserId:
 			if (am3sControl != null) {
 				am3sControl.setUserId(1);
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.sendrandom:
+		case R.id.btn_SendRandom:
 			if (am3sControl != null) {
 				am3sControl.sendRandom();
 			}else
 				Toast.makeText(this, "am3sControl == null", Toast.LENGTH_LONG).show();
 			break;
-		case R.id.disconnect:
+		case R.id.btn_Disconnect:
 			if (am3sControl != null) {
 				am3sControl.disconnect();
 			}else
