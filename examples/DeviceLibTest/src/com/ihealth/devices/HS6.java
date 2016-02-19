@@ -5,7 +5,6 @@
  * @date 2015年12月17日 下午2:00:36 
  * @version V1.0  
  */
-
 package com.ihealth.devices;
 
 import org.json.JSONArray;
@@ -18,7 +17,6 @@ import com.ihealth.communication.control.HS6Control;
 import com.ihealth.communication.manager.iHealthDeviceHs6Callback;
 import com.ihealth.communication.manager.iHealthDevicesManager;
 
-import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -46,7 +44,7 @@ public class HS6 extends Activity implements OnClickListener {
     private HS6Control mHS6control;
     private final String TAG = "HS6";
     private String userName = "liu01234345555@jiuan.com";
-    private String code = "MODEL:HS6 MAC:ACCF2337A94E LOGICVER:1.0.1";
+    private String serialNumber="ACCF2337A94E";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -193,7 +191,7 @@ public class HS6 extends Activity implements OnClickListener {
                     @Override
                     public void run() {
                         // TODO Auto-generated method stub
-                        boolean permission = mHS6control.bindDeviceHS6("1999-11-12 11:29:10", 160, 2, 1, code);
+                        boolean permission = mHS6control.bindDeviceHS6("1999-11-12 11:29:10",(float)46.7,160, 2, 1, serialNumber);
                         if (!permission) {
                             noticeString = "You haven't gotten the permission, please go to certificate firstly";
                             mHandler.sendEmptyMessage(1);
@@ -208,7 +206,7 @@ public class HS6 extends Activity implements OnClickListener {
                     @Override
                     public void run() {
                         // TODO Auto-generated method stub
-                        boolean permission = mHS6control.unBindDeviceHS6(code);
+                        boolean permission = mHS6control.unBindDeviceHS6(serialNumber);
                         if (!permission) {
                             noticeString = "You haven't gotten the permission, please go to certificate firstly";
                             mHandler.sendEmptyMessage(1);
@@ -233,7 +231,7 @@ public class HS6 extends Activity implements OnClickListener {
         ssid = getSSid();
         tvSSID.setText(ssid);
         etPwd = (EditText) viewPwd.findViewById(R.id.btSetWiFi_et_Pwd);
-        new AlertDialog.Builder(this).setTitle(this.getResources().getString(R.string.bluetooth_setwifi_title))
+        new Builder(this).setTitle(this.getResources().getString(R.string.bluetooth_setwifi_title))
                 .setView(viewPwd)
                 .setCancelable(false)
                 .setPositiveButton(R.string.ok,
@@ -296,7 +294,7 @@ public class HS6 extends Activity implements OnClickListener {
 
     private void showProgress() {
         if (dialog_wifi == null) {
-            AlertDialog.Builder builder = new Builder(this);
+            Builder builder = new Builder(this);
             builder.setView(new ProgressBar(this));
             dialog_wifi = builder.create();
             dialog_wifi.setCancelable(false);
