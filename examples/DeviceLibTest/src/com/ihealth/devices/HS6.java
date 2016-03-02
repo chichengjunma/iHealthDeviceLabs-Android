@@ -5,6 +5,7 @@
  * @date 2015年12月17日 下午2:00:36 
  * @version V1.0  
  */
+
 package com.ihealth.devices;
 
 import org.json.JSONArray;
@@ -88,7 +89,6 @@ public class HS6 extends Activity implements OnClickListener {
                             JSONObject jsonObject2 = (JSONObject) jsonArray.get(i);
                             int result = jsonObject2.getInt(HS6Control.BIND_HS6_RESULT);
                             String model = jsonObject2.getString(HS6Control.HS6_MODEL);
-                            String firmwareVersion = jsonObject2.getString(HS6Control.HS6_FIRMWARE_VERSION);
                             int position = jsonObject2.getInt(HS6Control.HS6_POSITION);
                             int settedWifi = jsonObject2.getInt(HS6Control.HS6_SETTED_WIFI);
                             if (result == 1) {
@@ -98,8 +98,7 @@ public class HS6 extends Activity implements OnClickListener {
                             } else {
                                 noticeString = "bind fail";
                             }
-                            noticeString =noticeString+"\n "+"result:" + result + "--model:" + model + "--firmwareVersion"
-                                    + firmwareVersion + "--position:" + position + "--setted:" + settedWifi;
+                            noticeString =noticeString+"\n "+"result:" + result + "--model:" + model  + "--position:" + position + "--setted:" + settedWifi;
                             Log.d(TAG, noticeString);
                             mHandler.sendEmptyMessage(1);
 
